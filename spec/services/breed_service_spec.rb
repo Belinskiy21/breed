@@ -105,7 +105,7 @@ RSpec.describe BreedService do # rubocop:disable Metrics/BlockLength
       let(:status) { 404 }
       let(:body) { '' }
 
-      it 'responds with false' do
+      it 'responds with nil' do
         expect(subject).to be nil
       end
     end
