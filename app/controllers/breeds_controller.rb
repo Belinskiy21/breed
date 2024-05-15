@@ -12,7 +12,7 @@ class BreedsController < ApplicationController
     if service.call
       redirect_to action: :new, img: service.img, breed: service.breed
     else
-      flash[:alert] = I18n.t(:something_wrong)
+      flash[:alert] = I18n.t(:no_matches_found)
       redirect_to action: :new
     end
   end

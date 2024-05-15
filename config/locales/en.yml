@@ -1,2 +1,4 @@
 en:
-  something_wrong: Something went wrong, please try again.
+  breed_label: Please enter a breed here
+  no_matches_found: Did not found matches, please try again.
+  breed_cant_be_blank: The breed must be provided

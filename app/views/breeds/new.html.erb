@@ -4,10 +4,10 @@
     <div class="col-3">
         <br>
         <%= form_tag "/breeds" do %>
-            <%= label_tag :breed, "Please enter a breed here", for: "breed"%>
-            <%= text_field_tag :breed, '', id: "breed", class: "form-control" %>
+            <%= label_tag :breed, I18n.t(:breed_label), for: "breed"%>
+            <%= text_field_tag :breed, '', id: "breed", class: "form-control", required: true %>
             <br>
-            <%= submit_tag "Submit!", class: "btn btn-primary"%>
+            <%= submit_tag "Submit", class: "btn btn-primary"%>
             <%= link_to "Clear", root_path, class: "btn btn-primary "%>
         <% end %>
         <br>
@@ -17,7 +17,7 @@
     </div>
     <div class="col-7">
         <h1><%= @breed %></h1>
-        <img src="<%= @img %>">
+        <img src="<%= @img %>", id="breed_img">
     </div>
   </div>
 </div>

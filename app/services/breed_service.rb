@@ -6,6 +6,7 @@ class BreedService
 
   def initialize(input)
     @input = input
+    raise ArgumentError, I18n.t(:breed_cant_be_blank) if input.blank?
   end
 
   def call
@@ -17,6 +18,8 @@ class BreedService
   end
 
   def img
+    return unless response.ok?
+
     JSON.parse(response.body)['message']
   end
 
